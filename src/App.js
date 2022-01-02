@@ -1,4 +1,4 @@
-/*import React from "react";
+import React from "react";
 import { Grid } from "@mui/material/";
 import Header from "./header";
 import Content from "./content";
