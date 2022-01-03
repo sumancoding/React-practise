@@ -1,4 +1,9 @@
-import React, { useState } from "react";
+/*In React typically data is passed top-down via props. 
+Context API allows to pass data through component tree without having to pass props manually at every level.
+Passing the intial state to React.createContext. This functiion then returns an object with a Provider and Consumer  
+ */
+
+/*import React, { useState } from "react";
 
 function Student() {
   const [title, setTitle] = useState("");
@@ -51,3 +56,4 @@ function Student() {
 }
 
 export default Student;
+*/

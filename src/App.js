@@ -1,3 +1,35 @@
+/*React hooks provides a concept called Context.
+React Context API allows you to easily access data at different levels of the component Tree , withput passing prop at every level
+- createContext();
+- Provider
+- Consumer
+*/
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Balance from "./components/Balance";
+import Income from "./components/Income";
+import Transaction from "./components/Transaction";
+import AddTransaction from "./components/AddTransaction";
+import { GlobalProvider } from "./context/GlobalState";
+
+function App() {
+  return (
+    <GlobalProvider>
+      <Header />
+      <div className="container">
+        <Balance />
+        <Income />
+        <Transaction />
+        <AddTransaction />
+      </div>
+    </GlobalProvider>
+  );
+}
+
+export default App;
+
+/*
 import React from "react";
 import { Grid } from "@mui/material/";
 import Header from "./header";
