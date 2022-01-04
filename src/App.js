@@ -1,16 +1,74 @@
+import React, { useRef, useState } from "react";
+
+function App() {
+  return (
+    <div>
+      <h1>Higher Order Function</h1>
+      <HOCRed cmp={Counter} />
+      <HOCGreen cmp={Counter} />
+      <HOCBlue cmp={Counter} />
+    </div>
+  );
+}
+
+function HOCRed(props) {
+  return (
+    <h2 style={{ backgroundColor: "Pink", width: 300 }}>
+      {" "}
+      Counter 1
+      <props.cmp />
+    </h2>
+  );
+}
+function HOCGreen(props) {
+  return (
+    <h2 style={{ backgroundColor: "Green", width: 300 }}>
+      Counter 2
+      <props.cmp />
+    </h2>
+  );
+}
+function HOCBlue(props) {
+  return (
+    <h2 style={{ backgroundColor: "Blue", width: 300 }}>
+      Counter 3
+      <props.cmp />
+    </h2>
+  );
+}
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h3> Count is: {count}</h3>
+      <button
+        onClick={() => {
+          return setCount(count + 1);
+        }}
+      >
+        {" "}
+        Update{" "}
+      </button>
+    </div>
+  );
+}
+
+export default App;
+
 /*React hooks provides a concept called Context.
 React Context API allows you to easily access data at different levels of the component Tree , withput passing prop at every level
 - createContext();
 - Provider
 - Consumer
-*/
 
-import React from "react";
+
+import React, { useState } from "react";
 import MyCounter from "./contextAPI/myCounter";
 import CounterContextProvider from "./contextAPI/CounterContext";
 import ComponentA from "./contextAPI/ComponentA";
 
 function App() {
+  
   return (
     <CounterContextProvider>
       <div>
