@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 
 function AddTransaction() {
   const [text, setText] = useState("");
@@ -43,3 +43,4 @@ function AddTransaction() {
 }
 
 export default AddTransaction;
+*/

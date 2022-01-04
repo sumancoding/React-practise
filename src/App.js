@@ -4,7 +4,27 @@ React Context API allows you to easily access data at different levels of the co
 - Provider
 - Consumer
 */
+
 import React from "react";
+import MyCounter from "./contextAPI/myCounter";
+import CounterContextProvider from "./contextAPI/CounterContext";
+import ComponentA from "./contextAPI/ComponentA";
+
+function App() {
+  return (
+    <CounterContextProvider>
+      <div>
+        <h1>CONTEXT API</h1>
+        <MyCounter />
+        <ComponentA />
+      </div>
+    </CounterContextProvider>
+  );
+}
+
+export default App;
+
+/*import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Balance from "./components/Balance";
@@ -29,7 +49,7 @@ function App() {
 
 export default App;
 
-/*
+
 import React from "react";
 import { Grid } from "@mui/material/";
 import Header from "./header";

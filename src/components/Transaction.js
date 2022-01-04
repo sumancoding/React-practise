@@ -1,4 +1,5 @@
-import React from "react";
+/*import React from "react";
+import {GlobalContext} from '../context/GlobalState';
 
 function Transaction() {
   return (
@@ -11,4 +12,4 @@ function Transaction() {
   );
 }
 
-export default Transaction;
+export default Transaction;*/
