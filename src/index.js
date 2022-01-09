@@ -1,5 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import FlexBox from "./FlexBox";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<FlexBox />, document.getElementById("root"));
